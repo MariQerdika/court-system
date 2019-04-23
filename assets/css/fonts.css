@@ -1,0 +1,16 @@
+@font-face {
+    font-family: '../fonts/BPGMrgvlovaniCaps2010';
+    src: url('../fonts/BPGMrgvlovaniCaps2010.eot?#iefix') format('embedded-opentype'),  url('../fonts/BPGMrgvlovaniCaps2010.woff') format('woff'),
+     url('../fonts/BPGMrgvlovaniCaps2010.ttf')  format('truetype'), url('../fonts/BPGMrgvlovaniCaps2010.svg#BPGMrgvlovaniCaps2010') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  
+}
+
+@font-face {
+  font-family: 'HelveticaNeueLT-LightCond';
+  src: url('../fonts/HelveticaNeueLT-LightCond.eot?#iefix') format('embedded-opentype'),  url('../fonts/HelveticaNeueLT-LightCond.otf')  format('opentype'),
+	     url('../fonts/HelveticaNeueLT-LightCond.woff') format('woff'), url('../fonts/HelveticaNeueLT-LightCond.ttf')  format('truetype'), url('../fonts/HelveticaNeueLT-LightCond.svg#HelveticaNeueLT-LightCond') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
