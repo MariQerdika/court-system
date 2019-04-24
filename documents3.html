@@ -12,6 +12,11 @@
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/fonts.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .active_class {
+            background: #F5403A;
+        }
+    </style>
 </head>
 
 <body>
@@ -32,45 +37,21 @@
         </div>
     </header>
 
-    <main>
-        <div class="container">
-            <a class="row content_list" href="documents.html">
-                <div class="col-2 col-sm-2 col-md-1 middle"><i class="fas fa-gavel"></i></div>
-                <div class="col-10 col-sm-10 col-md-11 center">
-                    <h2 class="block_header">გადაწყვეტილებები</h2>
-                    <p class="block_p">ამ განყოფილებაში შეგიძლებთ მოძებნოთ სასამართლო გადაწყვეტილებები,დოკუმენტები
-                        რომლებშიც დაფარულია მონაწილე მხარეების პერსონალური დასაიდენტიფიკაციო მონაცემები“
-                    </p>
-                </div>
-            </a>
-            <a class="row content_list" href="documents1.html">
-                <div class="col-2 col-sm-2 col-md-1 middle"><i class="fas fa-qrcode"></i></div>
-                <div class="col-10 col-sm-10 col-md-11 center">
-                    <h2 class="block_header">საბოლოო დოკუმენტები</h2>
-                    <p class="block_p">ამ განყოფილებაში შეგიძლიათ დოკუმენტის უნიკალური ნომრის (შტრიხ-კოდის) მეშვეობით
-                        მოძებნოთ და ჩამოტვირთოთ სასამართლო გადაწვეტილებისსაბოლოო დოკუმენტი
-                    </p>
-                </div>
-            </a>
-            <a class="row content_list" href="documents2.html">
-                <div class="col-2 col-sm-2 col-md-1 middle"><i class="fas fa-envelope-open-text"></i></div>
-                <div class="col-10 col-sm-10 col-md-11 center">
-                    <h2 class="block_header">საჯარო შეტყობინებები</h2>
-                    <p class="block_p">ამ განყოფილებაში შეგიძლებთ მოძებნოთ სასამართლო გადაწყვეტილებები,დოკუმენტები
-                        რომლებშიც დაფარულია მონაწილე მხარეების პერსონალური დასაიდენტიფიკაციო მონაცემები“
-                    </p>
-                </div>
-            </a>
-            <a class="row content_list" href="documents3.html">
-                <div class="col-2 col-sm-2 col-md-1 middle"><i class="fas fa-suitcase"></i></div>
-                <div class="col-10 col-sm-10 col-md-11 center">
-                    <h2 class="block_header">მიმდინარე საქმეები</h2>
-                    <p class="block_p">ამ განყოფილებაში შეგიძლებთ მოძებნოთ სასამართლო გადაწყვეტილებები,დოკუმენტები
-                        რომლებშიც დაფარულია მონაწილე მხარეების პერსონალური დასაიდენტიფიკაციო მონაცემები“
-                    </p>
-                </div>
-            </a>
-        </div>
+    <main class="Decision container">
+        <nav class="main_nav">
+            <ul class="menu_list">
+                <li class="active_tab"><a href="documents.html">გადაწყვეტილებები</a></li>
+                <li class="active_tab"><a href="documents1.html">საბოლოო დოკუმენტები</a></li>
+                <li class="active_tab"><a href="documents2.html">საჯარო შეტყობინებები</a></li>
+                <li class="active_tab active_class"><a href="documents3.html">მიმდინარე საქმეები</a></li>
+            </ul>
+            <div class="toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
     </main>
     <footer>
         <div class="container">
@@ -127,6 +108,16 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".active_tab").click(function () {
+                $(this).addClass("active_class");
+                $(".active_tab").not(this).removeClass("active_class");
+            })
+        })
+
+    </script>
 </body>
 
 </html>

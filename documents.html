@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>საქართველოს სასამართლოების საქმისწარმოების სისტემა</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <a class="col-10 col-sm-8 col-md-8 col-lg-6 col-xl-5 logo" href="index.html">
+                    <img src="assets/images/Logo.png">
+                </a>
+                <div class="col-2 col-sm-4 col-md-4 col-lg-6 col-xl-7 home">
+                    <a class="home_icon" href="#"><i class="fas fa-home"></i></a>
+                    <a class="user_interface" href="#">
+                        <i class="fas fa-user"></i>
+                        <p class="home_p">ჩემი კაბინეტი</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="Decision container">
+        <nav class="main_nav">
+            <ul class="menu_list">
+                <li class="active_tab active_class"><a href="documents.html">გადაწყვეტილებები</a></li>
+                <li class="active_tab"><a href="documents1.html">საბოლოო დოკუმენტები</a></li>
+                <li class="active_tab"><a href="documents2.html">საჯარო შეტყობინებები</a></li>
+                <li class="active_tab"><a href="documents3.html">მიმდინარე საქმეები</a></li>
+            </ul>
+            <div class="toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        <div class="decision_row">
+            <form>
+                <div class="warning"><img src="assets/images/warning.png"></div>
+                <div class="row">
+                    <div class="col-12 col-md-12 col-lg-8">
+
+                        <div class="filter">
+                            <div class="row_horizontal">
+                                <div class="col-12 col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        <label for="FormControlSelect11">საქმის ნომერი</label>
+                                        <input class="form-control" type="text" placeholder="პროექტები">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        <label for="FormControlSelect11">გადაწყვეტილების თარიღი</label>
+                                        <input class="form-control" type="text" placeholder="პროექტები">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row_horizontal">
+                                <div class="col-12 col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        <label for="FormControlSelect11">სასამართლოს დასახელება</label>
+                                        <select name="strategy" class="form-control selectpicker"
+                                            id="FormControlSelect3">
+                                            <option value="">სახელმწიფო სტრატეგია</option>
+                                            <option value="">2</option>
+                                            <option value="">3</option>
+                                            <option value="">4</option>
+                                            <option value="">5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        <label for="FormControlSelect11">საქმის კატეგორია</label>
+                                        <select name="project_type" class="form-control selectpicker"
+                                            id="FormControlSelect4">
+                                            <option value="">პროექტის ტიპი</option>
+                                            <option value="">2</option>
+                                            <option value="">3</option>
+                                            <option value="">4</option>
+                                            <option value="">5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row_horizontal">
+                                <div class="col-12 col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        <label for="FormControlSelect11">სასამართლო ინსტანცია</label>
+                                        <select name="finance" class="form-control selectpicker"
+                                            id="FormControlSelect5">
+                                            <option value="">დაფინანსების წყარო</option>
+                                            <option value="">2</option>
+                                            <option value="">3</option>
+                                            <option value="">4</option>
+                                            <option value="">5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        <label for="FormControlSelect11">დავის კატეგორია</label>
+                                        <select name="finance_agenncy" class="form-control selectpicker"
+                                            id="FormControlSelect6">
+                                            <option value="">დამფინანსებელი სააგენტო</option>
+                                            <option value="">2</option>
+                                            <option value="">3</option>
+                                            <option value="">4</option>
+                                            <option value="">5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row_horizontal">
+                                <div class="col-12">
+                                    <div class="form-group bottom">
+                                        <label for="FormControlSelect11">გადაწყვეტილების ტიპი</label>
+                                        <select name="finance_type" class="form-control selectpicker"
+                                            id="FormControlSelect7">
+                                            <option value="">დაფინანსების ტიპი</option>
+                                            <option value="">2</option>
+                                            <option value="">3</option>
+                                            <option value="">4</option>
+                                            <option value="">5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-12 col-lg-4 padd_left">
+                        <div class="col-12  padd_left">
+                            <div class="form-group">
+                                <label for="FormControlSelect11">გადაწყვეტილების ძებნა ტექსტით</label>
+                                <input class="form-control" type="text" placeholder="შეიყვანეთ ფრაგმენტი ტექსტიდან">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-12 col-lg-8">
+                        <div class="row_horizontal buttons">
+                            <div class="col-12 col-md-6"> <button type="submit">ძებნა</button></div>
+                            <div class="col-12 col-md-6 reset"> <input type="reset" value="გასუფთავება"></div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer_menu">
+                <div class="menu_block">
+                    <h6 class="menu_title">სერვისები</h6>
+                    <ul>
+                        <li><a href="#">გადაწყვეტილებები</a></li>
+                        <li><a href="#">საბოლოო დოკუმენტები</a></li>
+                        <li><a href="#">საჯარო შეტყობინებები</a></li>
+                        <li><a href="#">მიმდინარე საქმეები</a></li>
+                        <li><a href="#">ჩემი კაბინეტი</a></li>
+                    </ul>
+                </div>
+                <div class="menu_block">
+                    <h6 class="menu_title">სასარგებლო ბმულები</h6>
+                    <ul>
+                        <li><a href="#">საქართველოს სასამართლოები</a></li>
+                        <li><a href="#">თბილისის საქალაქო სასამართლო</a></li>
+                        <li><a href="#">საქართველოს იუსტიციის უმაღლესი საბჭო</a></li>
+                    </ul>
+                </div>
+                <div class="menu_block">
+                    <h6 class="menu_title">დამატებითი ინფორმაცია</h6>
+                    <ul>
+                        <li><a href="#">კონტაქტი</a></li>
+                        <li><a href="#">ხშირად დასმული კითხვები</a></li>
+                        <li><a href="#">მომხმარებლის სახელმძღვანელო</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/js/bootstrap-select.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
