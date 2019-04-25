@@ -15,5 +15,10 @@ $(document).ready(function () {
         $(".active_tab").not(this).removeClass("active_class");
     })
     //  end tab style
-
 });
+
+// add infut fields
+function addInput() {
+    var i = 1;
+    if ($(".exampler").length < 4) my_div.innerHTML = my_div.innerHTML + "<input type='text' class='form-control exampler' placeholder='შეიყვანეთ ფრაგმენტი ტექსტიდან' name='mytext'+ i>"
+}

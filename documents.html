@@ -11,8 +11,18 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/fonts.css">
-    <link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
+
+    <link rel="stylesheet" href="assets/css/multiple-select.css">
+
+
     <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+
+    </script>
+
+    <style>
+
+    </style>
 </head>
 
 <body>
@@ -73,26 +83,26 @@
                                 <div class="col-12 col-md-6 col-lg-6">
                                     <div class="form-group">
                                         <label for="FormControlSelect11">სასამართლოს დასახელება</label>
-                                        <select name="strategy" class="form-control selectpicker"
-                                            id="FormControlSelect3">
-                                            <option value="">სახელმწიფო სტრატეგია</option>
-                                            <option value="">2</option>
-                                            <option value="">3</option>
-                                            <option value="">4</option>
-                                            <option value="">5</option>
+                                        <select multiple="multiple" id="select1">
+                                            <option value="1">January</option>
+                                            <option value="2">February</option>
+                                            <option value="3">March</option>
+                                            <option value="4">April</option>
+                                            <option value="5">May</option>
+                                            <option value="6">June</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6 col-lg-6">
                                     <div class="form-group">
                                         <label for="FormControlSelect11">საქმის კატეგორია</label>
-                                        <select name="project_type" class="form-control selectpicker"
-                                            id="FormControlSelect4">
-                                            <option value="">პროექტის ტიპი</option>
-                                            <option value="">2</option>
-                                            <option value="">3</option>
-                                            <option value="">4</option>
-                                            <option value="">5</option>
+                                        <select multiple="multiple" id="select2">
+                                            <option value="1">January</option>
+                                            <option value="2">February</option>
+                                            <option value="3">March</option>
+                                            <option value="4">April</option>
+                                            <option value="5">May</option>
+                                            <option value="6">June</option>
                                         </select>
                                     </div>
                                 </div>
@@ -101,26 +111,26 @@
                                 <div class="col-12 col-md-6 col-lg-6">
                                     <div class="form-group">
                                         <label for="FormControlSelect11">სასამართლო ინსტანცია</label>
-                                        <select name="finance" class="form-control selectpicker"
-                                            id="FormControlSelect5">
-                                            <option value="">დაფინანსების წყარო</option>
-                                            <option value="">2</option>
-                                            <option value="">3</option>
-                                            <option value="">4</option>
-                                            <option value="">5</option>
+                                        <select multiple="multiple" id="select3">
+                                            <option value="1">January</option>
+                                            <option value="2">February</option>
+                                            <option value="3">March</option>
+                                            <option value="4">April</option>
+                                            <option value="5">May</option>
+                                            <option value="6">June</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6 col-lg-6">
                                     <div class="form-group">
-                                        <label for="FormControlSelect11">დავის კატეგორია</label>
-                                        <select name="finance_agenncy" class="form-control selectpicker"
-                                            id="FormControlSelect6">
-                                            <option value="">დამფინანსებელი სააგენტო</option>
-                                            <option value="">2</option>
-                                            <option value="">3</option>
-                                            <option value="">4</option>
-                                            <option value="">5</option>
+                                        <label for="FormContr olSelect11">დავის კატეგორია</label>
+                                        <select multiple="multiple" id="select4">
+                                            <option value="1">January</option>
+                                            <option value="2">February</option>
+                                            <option value="3">March</option>
+                                            <option value="4">April</option>
+                                            <option value="5">May</option>
+                                            <option value="6">June</option>
                                         </select>
                                     </div>
                                 </div>
@@ -129,13 +139,13 @@
                                 <div class="col-12">
                                     <div class="form-group bottom">
                                         <label for="FormControlSelect11">გადაწყვეტილების ტიპი</label>
-                                        <select name="finance_type" class="form-control selectpicker"
-                                            id="FormControlSelect7">
-                                            <option value="">დაფინანსების ტიპი</option>
-                                            <option value="">2</option>
-                                            <option value="">3</option>
-                                            <option value="">4</option>
-                                            <option value="">5</option>
+                                        <select multiple="multiple" id="select5">
+                                            <option value="7">July</option>
+                                            <option value="8">August</option>
+                                            <option value="9">September</option>
+                                            <option value="10">October</option>
+                                            <option value="11">November</option>
+                                            <option value="12">December</option>
                                         </select>
                                     </div>
                                 </div>
@@ -146,7 +156,13 @@
                         <div class="col-12  padd_left">
                             <div class="form-group">
                                 <label for="FormControlSelect11">გადაწყვეტილების ძებნა ტექსტით</label>
-                                <input class="form-control" type="text" placeholder="შეიყვანეთ ფრაგმენტი ტექსტიდან">
+                                <input class="form-control" name=t1 type="text"
+                                    placeholder="შეიყვანეთ ფრაგმენტი ტექსტიდან">
+                                <span class="button" onClick="addInput()"><i class="fas fa-plus"></i> ტექსტით საძიებო
+                                    ველის
+                                    დამატება</span>
+
+                                <div id="my_div"></div>
                             </div>
                         </div>
                     </div>
@@ -215,8 +231,20 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="assets/js/bootstrap-select.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/multiple-select.js"></script>
+    <script>
+        function mounted() {
+            $('#select1').multipleSelect()
+            $('#select2').multipleSelect()
+            $('#select3').multipleSelect()
+            $('#select4').multipleSelect()
+            $('#select5').multipleSelect()
+        }
+
+        mounted();
+    </script>
+
 </body>
 
 </html>
