@@ -1,4 +1,5 @@
-header, .block_header, .menu_title, .menu_list a, .form-group label, .reset [type=reset], .row_horizontal  [type=submit], .span.button  {
+header, .block_header, .menu_title, .menu_list a, .form-group label, .reset [type=reset], .row_horizontal  [type=submit], .button,
+thead th, .search_result, .more button, .closeBtn   {
     font-family: '../fonts/BPGMrgvlovaniCaps2010';
 }
 .block_p, .filter-option-inner-inner {
@@ -119,7 +120,9 @@ main .middle {
     }
      nav ul li  {
       flex: 1; 
+
     }
+    
      nav ul li a {
       display: flex;
       justify-content: center;
@@ -129,12 +132,21 @@ main .middle {
       height: 100%;
       line-height: 1;
       font-size: 14px;
+      
+  
     }
-    nav ul li a:hover {
+    nav ul li:hover {
       background-color: #F5403A;
       color: #fff;
       text-decoration: none;
     }
+    .active_tab.active_class li a {
+        border: 1px solid red;
+    }
+    nav ul li a:hover {
+        color: #fff;
+        text-decoration: none;
+      }
     .toggle {
       transform: translate(-50%, -50%);
       height: 20px;
@@ -201,6 +213,8 @@ main .middle {
     background-color: #fff;
     box-shadow: 0px 3px 6px  rgba(0, 0, 0, 0.16);
     padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
 }
 .filter {
     border-right: 4px solid #EEEEEE;
@@ -329,8 +343,125 @@ label {
     margin-bottom: 0;
 }
 /* end forms style */
+/* start table style */
+.court_table thead {
+    background-color: #3E474E;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+}
+.court_table tbody tr:hover {
+    color: #F5403A;
+    cursor: pointer;
+}
+.court_table tbody tr {
+    font-size: 12px;
+}
+.table td, .table th {
+    vertical-align: middle;
+}
+.table thead th, tr th, tr td {
+    vertical-align: middle;
+    text-align: center;
+}
+.search_result {
+    font-size: 12px;
+    padding: 10px 0 12px;
+}
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #fff;
+}
+.table th  {
+    font-weight: normal;
+}
+.table-striped tbody tr{
+    border-bottom: 1px solid #dee2e6;
+}
+.decision_row .more button {
+background-color: #0F9D58;
+border: none;
+color: #fff;
+font-size: 12px;
+padding: 7px 33px;
+border-radius: 3px;
+cursor: pointer;
+}
+.decision_row .more button:hover {
+    background-color: rgb(13, 141, 79);  
+}
+.decision_row .more {
+    text-align: center;
+}
+.decision_row .more button span {
+    display: block;
+}
+/* modal style */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(72,72,72,0.68)
+}
+.modal-content {
+    background-color: #f4f4f4;
+    margin: 18% auto;
+    width: 100%;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17);
+    animation-name: modalopen;
+    animation-duration: 1s;
+}
+@keyframes modalopen {
+    from{ opacity: 0}
+    to {opacity: 1}
+}
 
 
+.closeBtn {
+    background-color: #F5403A;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 44px;
+    border-radius: 3px;
+    margin-top: 7px;
+}
+
+.closeBtn:hover,.closeBtn:focus {
+    background-color: rgb(231, 60, 55);
+    color: #fff;
+    cursor:pointer;
+}
+#simpleModal .Decision {
+    margin-bottom: 0;
+}
+.modal-body {
+    padding: 0;
+}
+#simpleModal .Decision .decision_row {
+    margin-bottom: 0;
+}
+.search_result {
+padding: 10px 0 12px 15px;
+}
+.pdf_version img {
+    padding-right: 10px;
+}
+.addinput {
+    position: relative;
+    margin: 0 0 20px 0;
+}
+.addinput a {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+.addinput:last-child {
+    margin-bottom: 0;
+}
 
 
 
@@ -360,6 +491,18 @@ footer .menu_title {
     background-position: left bottom;
     padding-bottom: 8px;
 }
+
+/* @media (min-width: 768px) {
+    nav ul li:last-child a {
+        border: none;
+      }
+      nav ul li a {
+        border-right: 1px solid #fff;
+          height: 30px;
+    margin-top: 10px;
+      }
+  } */
+
 @media (min-width: 992px) {
     .padd_left {
         padding-left: 0;
@@ -374,7 +517,7 @@ footer .menu_title {
   }
   @media (min-width: 1367px) {
     main {
-        min-height: 70vh;
+        min-height:  70vh;
     }
    
   }
@@ -406,6 +549,9 @@ footer .menu_title {
     }
     .padd_left {
         margin-top: 20px;
+    }
+    .Decision .decision_row.row {
+        overflow-x: scroll;
     }
  }
 
@@ -474,7 +620,10 @@ top: 15px;
     width: 100%;
    
 }
-
+.close_btn {
+    text-align: center;
+    margin-top: 10px;
+}
  } 
 
 
@@ -495,6 +644,10 @@ main .block_header {
 main .content_list i {
     font-size: 40px;
 }
-
-
+#simpleModal .Decision .decision_row {
+    overflow-x: scroll;
+}
+.form-group span.button {
+    font-size: 10px;
+}
   }
