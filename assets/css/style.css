@@ -1,10 +1,13 @@
 header, .block_header, .menu_title, .menu_list a, .form-group label, .reset [type=reset], .row_horizontal  [type=submit], .button,
-thead th, .search_result, .more button, .closeBtn   {
+thead th, .search_result, .more button, .closeBtn, .small_resolution   {
     font-family: '../fonts/BPGMrgvlovaniCaps2010';
 }
-.block_p, .filter-option-inner-inner {
+.block_p, .filter-option-inner-inner, table td, .menu_block a {
 font-family: 'HelveticaNeueLT-LightCond';
 }
+html {
+    scroll-behavior: smooth;
+  }
 body {
     background-color: #EEEEEE;
 }
@@ -21,8 +24,16 @@ header .home {
     align-items: center;
     justify-content: flex-end;
 }
-.logo img {
-    width: 100%;
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo .logo_text {
+    margin-left: 20px;
+    color: #fff;
+    line-height: 1.2;
 }
 .home .home_p {
     margin: 0;
@@ -64,7 +75,7 @@ main .content_list {
     padding: 20px;  
 }
 main {
-    padding: 20px 0;
+    margin: 20px 0;
 }
 main .content_list:hover .block_p, main .content_list:hover i, main .content_list:hover .block_header  {
     color:#F5403A;
@@ -102,7 +113,19 @@ main .middle {
 }
 /* end main page style */
 
-
+#myBtn {
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    border: none;
+    outline: none;
+    background-color: #0E96FF;
+    color: white;
+    cursor: pointer;
+    padding: 6px 13px;
+    border-radius: 3px;
+}
 /* start menu style */
 .main_nav {
     background-color: #3E474E;
@@ -409,7 +432,7 @@ cursor: pointer;
 }
 .modal-content {
     background-color: #f4f4f4;
-    margin: 18% auto;
+    margin: 2% auto;
     width: 100%;
     box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17);
     animation-name: modalopen;
@@ -443,6 +466,9 @@ cursor: pointer;
 }
 #simpleModal .Decision .decision_row {
     margin-bottom: 0;
+}
+.Decision {
+    position: relative;
 }
 .search_result {
 padding: 10px 0 12px 15px;
@@ -503,11 +529,22 @@ footer .menu_title {
       }
   } */
 
+
+@media (min-width: 768px) {
+    .small_resolution {
+
+        display: none;
+    }
+  }
+
+
 @media (min-width: 992px) {
     .padd_left {
         padding-left: 0;
     }
   }
+
+
 @media (min-width: 1200px) {
     header {
         margin: 10px 10px 0 10px;
@@ -515,17 +552,22 @@ footer .menu_title {
     }
    
   }
+
+
   @media (min-width: 1367px) {
     main {
-        min-height:  70vh;
+        min-height:  66.5vh;
     }
-   
+    .modal-content {
+        margin: 18% auto;
+    }
   }
+
+
   @media (max-width: 1199.98px) {
     main .content_list {
         padding: 20px 0;
     }
-    
   }
 
 @media (max-width: 991.98px) {
@@ -550,16 +592,15 @@ footer .menu_title {
     .padd_left {
         margin-top: 20px;
     }
-    .Decision .decision_row.row {
-        overflow-x: scroll;
+    .table td, .table th {
+        padding: .25rem;
     }
  }
 
-
- @media (max-width: 767.98px) {  
+@media (max-width: 767.98px) {  
     .home_p {
     display: none;
-}
+    }
 footer .footer_menu {
     flex-direction: column;
 }
@@ -624,8 +665,49 @@ top: 15px;
     text-align: center;
     margin-top: 10px;
 }
+.logo .logo_text {
+    font-size: 14px;
+}
+/* table small resolution */
+table tbody td, th, tr {
+    display: block;
+    text-align: left !important;
+}
+thead {
+    display:none;
+}
+.table td, .table th {
+    border-top: 1px solid #fff !important;
+    padding: 0 0 15px 15px;
+}
+td.small_resolution, th.small_resolution {
+    padding-bottom: 0 !important;
+    
+}
+th.small_resolution {
+    padding-top: 15px;
+}
+.search_result {
+    border-bottom: 1px solid #dee2e6;
+}
+.pdf_version {
+    display: inline-block;
+    float: left;
+    margin-right: 7px; 
+}
+.pdf_version img {
+    padding-right: 0;
+}
+tbody td img {
+    width: 20px;
+}
+#myBtn {
+    bottom: -45px;
+}
+.Decision .decision_row {
+    margin-bottom: 55px;
  } 
-
+}
 
  @media (max-width: 575.98px) {
     header .home .home_icon, .home_p {
@@ -650,4 +732,23 @@ main .content_list i {
 .form-group span.button {
     font-size: 10px;
 }
+.logo img {
+    width: 60px;
+}
+.logo .logo_text {
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+  }
+
+  @media (max-width: 379.98px) {
+
+    .logo img {
+        width: 40px;
+    }
+    .logo .logo_text {
+        font-size: 8px;
+        margin-left: 10px;
+    }
   }
