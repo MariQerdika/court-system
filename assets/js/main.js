@@ -51,17 +51,6 @@ $(document).ready(function () {
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
 // modal
 var modal = document.getElementById('simpleModal');
 var modalBtn = document.querySelectorAll('.modalBtn');
@@ -82,6 +71,22 @@ function outsideClick(e) {
     if (e.target == modal) {
         modal.style.display = 'none';
     }
+}
+
+
+
+// scroll top button
+window.onscroll = function () { scrollFunction() };
+function scrollFunction() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+function topScrollFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }
 
 
