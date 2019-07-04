@@ -11,12 +11,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/multiple-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <style>
-        .active_class {
-            background: #F5403A;
-        }
-    </style>
 </head>
 
 <body>
@@ -42,7 +38,7 @@
         <nav class="main_nav">
             <ul class="menu_list">
                 <li class="active_tab"><a href="documents.html">გადაწყვეტილებები</a></li>
-                <li class="active_tab active_class"><a href="documents1.html">საბოლოო დოკუმენტები</a></li>
+                <li class="active_tab  active_class"><a href="documents1.html">საბოლოო დოკუმენტები</a></li>
                 <li class="active_tab"><a href="documents2.html">საჯარო შეტყობინებები</a></li>
                 <li class="active_tab"><a href="documents3.html">მიმდინარე საქმეები</a></li>
             </ul>
@@ -53,7 +49,404 @@
                 <span></span>
             </div>
         </nav>
+        <div class="decision_row">
+            <form>
+                <div class="warning"><img src="assets/images/warning.png"></div>
+                <div class="row">
+                    <div class="col-12 col-md-12 col-lg-8">
+                        <div class="filter">
+                            <div class="row_horizontal">
+                                <div class="col-12 col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        <label for="FormControlSelect11">საქმის ნომერი</label>
+                                        <input class="form-control" type="text" placeholder="პროექტები">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        <label for="FormControlSelect11">გადაწყვეტილების თარიღი</label>
+                                        <div class="row">
+                                            <div class="col-6"> <input class="form-control" type="text"></div>
+                                            <div class="col-6"> <input class="form-control" type="text"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row_horizontal">
+                                <div class="col-12 col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        <label for="FormControlSelect11">სასამართლოს დასახელება</label>
+                                        <select multiple="multiple" id="select1">
+                                            <option value="1">January</option>
+                                            <option value="2">February</option>
+                                            <option value="3">March</option>
+                                            <option value="4">April</option>
+                                            <option value="5">May</option>
+                                            <option value="6">June</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        <label for="FormControlSelect11">საქმის კატეგორია</label>
+                                        <select multiple="multiple" id="select2">
+                                            <option value="1">January</option>
+                                            <option value="2">February</option>
+                                            <option value="3">March</option>
+                                            <option value="4">April</option>
+                                            <option value="5">May</option>
+                                            <option value="6">June</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row_horizontal">
+                                <div class="col-12 col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        <label for="FormControlSelect11">სასამართლო ინსტანცია</label>
+                                        <select multiple="multiple" id="select3">
+                                            <option value="1">January</option>
+                                            <option value="2">February</option>
+                                            <option value="3">March</option>
+                                            <option value="4">April</option>
+                                            <option value="5">May</option>
+                                            <option value="6">June</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        <label for="FormContr olSelect11">დავის კატეგორია</label>
+                                        <select multiple="multiple" id="select4">
+                                            <option value="1">January</option>
+                                            <option value="2">February</option>
+                                            <option value="3">March</option>
+                                            <option value="4">April</option>
+                                            <option value="5">May</option>
+                                            <option value="6">June</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row_horizontal">
+                                <div class="col-12">
+                                    <div class="form-group bottom">
+                                        <label for="FormControlSelect11">გადაწყვეტილების ტიპი</label>
+                                        <select multiple="multiple" id="select5">
+                                            <option value="7">July</option>
+                                            <option value="8">August</option>
+                                            <option value="9">September</option>
+                                            <option value="10">October</option>
+                                            <option value="11">November</option>
+                                            <option value="12">December</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-12 col-lg-4 padd_left">
+                        <div class="col-12  padd_left">
+                            <div class="form-group">
+                                <label for="FormControlSelect11">გადაწყვეტილების ძებნა ტექსტით</label>
+                                <div class="wrapper">
+                                    <div class="addinput"><input class="form-control" type="text"
+                                            name="input_array_name[]" placeholder="შეიყვანეთ ფრაგმენტი ტექსტიდან" />
+                                    </div>
+                                </div>
+                                <span id="InputHide" class="button add_fields"><i class="fas fa-plus"></i> ტექსტით
+                                    საძიებო ველის დამატება</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-12 col-lg-8">
+                        <div class="row_horizontal buttons">
+                            <div class="col-12 col-md-6"> <button type="submit">ძებნა</button></div>
+                            <div class="col-12 col-md-6 reset"> <input type="reset" value="გასუფთავება"></div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="Decision container table_min">
+            <div class="decision_row row">
+                <div class="col-12 search_result">მოიძებნა: 50</div>
+                <table class="table table-striped court_table">
+                    <thead>
+                        <tr>
+                            <th scope="col">საქმის ნომერი</th>
+                            <th scope="col">სასამართლო</th>
+                            <th scope="col">საქმის კატეგორია</th>
+                            <th scope="col">დოკუმენტის დასახელება</th>
+                            <th scope="col">დავის კატეგორია</th>
+                            <th scope="col">თარიღი</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="modalBtn">
+                            <th class="small_resolution">საქმის ნომერი</th>
+                            <th scope="row">059673869201939586</th>
+                            <td class="small_resolution">სასამართლო</td>
+                            <td>თბილისის საქალაქო
+                                სასამართლო</td>
+                            <td class="small_resolution">საქმის კატეგორია</td>
+                            <td>ადმინისტრაციული
+                                სამართალდარღვევა</td>
+                            <td class="small_resolution">დოკუმენტის დასახელება</td>
+                            <td>გადაწყვეტილება</td>
+                            <td class="small_resolution">დავის კატეგორია</td>
+                            <td>სულ შრომის სამართლებრივი დავებიდან
+                                ქალთა და არასრულწლოვანთა შრომასთან
+                                დაკავშირებული დავები</td>
+                            <td class="small_resolution">თარიღი</td>
+                            <td>531/12/2018</td>
+                        </tr>
+                        <tr class="modalBtn">
+                            <th class="small_resolution">საქმის ნომერი</th>
+                            <th scope="row">059673869201939586</th>
+                            <td class="small_resolution">სასამართლო</td>
+                            <td>თბილისის საქალაქო
+                                სასამართლო</td>
+                            <td class="small_resolution">საქმის კატეგორია</td>
+                            <td>ადმინისტრაციული
+                                სამართალდარღვევა</td>
+                            <td class="small_resolution">დოკუმენტის დასახელება</td>
+                            <td>გადაწყვეტილება</td>
+                            <td class="small_resolution">დავის კატეგორია</td>
+                            <td>სულ შრომის სამართლებრივი დავებიდან
+                                ქალთა და არასრულწლოვანთა შრომასთან
+                                დაკავშირებული დავები</td>
+                            <td class="small_resolution">თარიღი</td>
+                            <td>531/12/2018</td>
+                        </tr>
+                        <tr class="modalBtn">
+                            <th class="small_resolution">საქმის ნომერი</th>
+                            <th scope="row">059673869201939586</th>
+                            <td class="small_resolution">სასამართლო</td>
+                            <td>თბილისის საქალაქო
+                                სასამართლო</td>
+                            <td class="small_resolution">საქმის კატეგორია</td>
+                            <td>ადმინისტრაციული
+                                სამართალდარღვევა</td>
+                            <td class="small_resolution">დოკუმენტის დასახელება</td>
+                            <td>გადაწყვეტილება</td>
+                            <td class="small_resolution">დავის კატეგორია</td>
+                            <td>სულ შრომის სამართლებრივი დავებიდან
+                                ქალთა და არასრულწლოვანთა შრომასთან
+                                დაკავშირებული დავები</td>
+                            <td class="small_resolution">თარიღი</td>
+                            <td>531/12/2018</td>
+                        </tr>
+                        <tr class="modalBtn">
+                            <th class="small_resolution">საქმის ნომერი</th>
+                            <th scope="row">059673869201939586</th>
+                            <td class="small_resolution">სასამართლო</td>
+                            <td>თბილისის საქალაქო
+                                სასამართლო</td>
+                            <td class="small_resolution">საქმის კატეგორია</td>
+                            <td>ადმინისტრაციული
+                                სამართალდარღვევა</td>
+                            <td class="small_resolution">დოკუმენტის დასახელება</td>
+                            <td>გადაწყვეტილება</td>
+                            <td class="small_resolution">დავის კატეგორია</td>
+                            <td>სულ შრომის სამართლებრივი დავებიდან
+                                ქალთა და არასრულწლოვანთა შრომასთან
+                                დაკავშირებული დავები</td>
+                            <td class="small_resolution">თარიღი</td>
+                            <td>531/12/2018</td>
+                        </tr>
+                        <tr class="modalBtn">
+                            <th class="small_resolution">საქმის ნომერი</th>
+                            <th scope="row">059673869201939586</th>
+                            <td class="small_resolution">სასამართლო</td>
+                            <td>თბილისის საქალაქო
+                                სასამართლო</td>
+                            <td class="small_resolution">საქმის კატეგორია</td>
+                            <td>ადმინისტრაციული
+                                სამართალდარღვევა</td>
+                            <td class="small_resolution">დოკუმენტის დასახელება</td>
+                            <td>გადაწყვეტილება</td>
+                            <td class="small_resolution">დავის კატეგორია</td>
+                            <td>სულ შრომის სამართლებრივი დავებიდან
+                                ქალთა და არასრულწლოვანთა შრომასთან
+                                დაკავშირებული დავები</td>
+                            <td class="small_resolution">თარიღი</td>
+                            <td>531/12/2018</td>
+                        </tr>
+                        <tr class="modalBtn">
+                            <th class="small_resolution">საქმის ნომერი</th>
+                            <th scope="row">059673869201939586</th>
+                            <td class="small_resolution">სასამართლო</td>
+                            <td>თბილისის საქალაქო
+                                სასამართლო</td>
+                            <td class="small_resolution">საქმის კატეგორია</td>
+                            <td>ადმინისტრაციული
+                                სამართალდარღვევა</td>
+                            <td class="small_resolution">დოკუმენტის დასახელება</td>
+                            <td>გადაწყვეტილება</td>
+                            <td class="small_resolution">დავის კატეგორია</td>
+                            <td>სულ შრომის სამართლებრივი დავებიდან
+                                ქალთა და არასრულწლოვანთა შრომასთან
+                                დაკავშირებული დავები</td>
+                            <td class="small_resolution">თარიღი</td>
+                            <td>531/12/2018</td>
+                        </tr>
+                        <tr class="modalBtn">
+                            <th class="small_resolution">საქმის ნომერი</th>
+                            <th scope="row">059673869201939586</th>
+                            <td class="small_resolution">სასამართლო</td>
+                            <td>თბილისის საქალაქო
+                                სასამართლო</td>
+                            <td class="small_resolution">საქმის კატეგორია</td>
+                            <td>ადმინისტრაციული
+                                სამართალდარღვევა</td>
+                            <td class="small_resolution">დოკუმენტის დასახელება</td>
+                            <td>გადაწყვეტილება</td>
+                            <td class="small_resolution">დავის კატეგორია</td>
+                            <td>სულ შრომის სამართლებრივი დავებიდან
+                                ქალთა და არასრულწლოვანთა შრომასთან
+                                დაკავშირებული დავები</td>
+                            <td class="small_resolution">თარიღი</td>
+                            <td>531/12/2018</td>
+                        </tr>
+                        <tr class="modalBtn">
+                            <th class="small_resolution">საქმის ნომერი</th>
+                            <th scope="row">059673869201939586</th>
+                            <td class="small_resolution">სასამართლო</td>
+                            <td>თბილისის საქალაქო
+                                სასამართლო</td>
+                            <td class="small_resolution">საქმის კატეგორია</td>
+                            <td>ადმინისტრაციული
+                                სამართალდარღვევა</td>
+                            <td class="small_resolution">დოკუმენტის დასახელება</td>
+                            <td>გადაწყვეტილება</td>
+                            <td class="small_resolution">დავის კატეგორია</td>
+                            <td>სულ შრომის სამართლებრივი დავებიდან
+                                ქალთა და არასრულწლოვანთა შრომასთან
+                                დაკავშირებული დავები</td>
+                            <td class="small_resolution">თარიღი</td>
+                            <td>531/12/2018</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="col-12 more"><button type="button"><span> მეტის ნახვა</span><img
+                            src="assets/images/arrow-down.png">
+                    </button>
+                </div>
+                <button onclick="topScrollFunction()" id="myBtn"><img src="assets/images/arrow_top.png"> </button>
+            </div>
+        </div>
     </main>
+
+    <div id="simpleModal" class="modal">
+        <div class="container Decision">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="decision_row">
+                        <div class="col-12 search_result">საქმე No: 2569874569100254850</div>
+                        <table class="table table-striped court_table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">ინსტანცია</th>
+                                    <th scope="col">დოკუმენტის დასახელება</th>
+                                    <th scope="col" colspan="2">გადაწყვეტილება</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th class="small_resolution">ინსტანცია</td>
+                                    <th scope="row">თბილისის საქალაქო სასამართლო</th>
+                                    <td class="small_resolution">დოკუმენტის დასახელება</td>
+                                    <td>გადაწყვეტილება</td>
+                                    <td class="small_resolution">გადაწყვეტილება</td>
+                                    <td class="pdf_version"><img src="assets/images/pdf.png"> საბეჭდი ვერსია</td>
+                                    <td><img src="assets/images/file.png"> ტექსტური ვერსია</td>
+                                </tr>
+                                <tr>
+                                    <th class="small_resolution">ინსტანცია</td>
+                                    <th scope="row">თბილისის საქალაქო სასამართლო</th>
+                                    <td class="small_resolution">დოკუმენტის დასახელება</td>
+                                    <td>გადაწყვეტილება</td>
+                                    <td class="small_resolution">გადაწყვეტილება</td>
+                                    <td class="pdf_version"><img src="assets/images/pdf.png"> საბეჭდი ვერსია</td>
+                                    <td><img src="assets/images/file.png"> ტექსტური ვერსია</td>
+                                </tr>
+                                <tr>
+                                    <th class="small_resolution">ინსტანცია</td>
+                                    <th scope="row">თბილისის საქალაქო სასამართლო</th>
+                                    <td class="small_resolution">დოკუმენტის დასახელება</td>
+                                    <td>გადაწყვეტილება</td>
+                                    <td class="small_resolution">გადაწყვეტილება</td>
+                                    <td class="pdf_version"><img src="assets/images/pdf.png"> საბეჭდი ვერსია</td>
+                                    <td><img src="assets/images/file.png"> ტექსტური ვერსია</td>
+                                </tr>
+                                <tr>
+                                    <th class="small_resolution">ინსტანცია</td>
+                                    <th scope="row">თბილისის საქალაქო სასამართლო</th>
+                                    <td class="small_resolution">დოკუმენტის დასახელება</td>
+                                    <td>გადაწყვეტილება</td>
+                                    <td class="small_resolution">გადაწყვეტილება</td>
+                                    <td class="pdf_version"><img src="assets/images/pdf.png"> საბეჭდი ვერსია</td>
+                                    <td><img src="assets/images/file.png"> ტექსტური ვერსია</td>
+                                </tr>
+                                <tr>
+                                    <th class="small_resolution">ინსტანცია</td>
+                                    <th scope="row">თბილისის საქალაქო სასამართლო</th>
+                                    <td class="small_resolution">დოკუმენტის დასახელება</td>
+                                    <td>გადაწყვეტილება</td>
+                                    <td class="small_resolution">გადაწყვეტილება</td>
+                                    <td class="pdf_version"><img src="assets/images/pdf.png"> საბეჭდი ვერსია</td>
+                                    <td><img src="assets/images/file.png"> ტექსტური ვერსია</td>
+                                </tr>
+                                <tr>
+                                    <th class="small_resolution">ინსტანცია</td>
+                                    <th scope="row">თბილისის საქალაქო სასამართლო</th>
+                                    <td class="small_resolution">დოკუმენტის დასახელება</td>
+                                    <td>გადაწყვეტილება</td>
+                                    <td class="small_resolution">გადაწყვეტილება</td>
+                                    <td class="pdf_version"><img src="assets/images/pdf.png"> საბეჭდი ვერსია</td>
+                                    <td><img src="assets/images/file.png"> ტექსტური ვერსია</td>
+                                </tr>
+                                <tr>
+                                    <th class="small_resolution">ინსტანცია</td>
+                                    <th scope="row">თბილისის საქალაქო სასამართლო</th>
+                                    <td class="small_resolution">დოკუმენტის დასახელება</td>
+                                    <td>გადაწყვეტილება</td>
+                                    <td class="small_resolution">გადაწყვეტილება</td>
+                                    <td class="pdf_version"><img src="assets/images/pdf.png"> საბეჭდი ვერსია</td>
+                                    <td><img src="assets/images/file.png"> ტექსტური ვერსია</td>
+                                </tr>
+
+                                <tr>
+                                    <th class="small_resolution">ინსტანცია</td>
+                                    <th scope="row">თბილისის საქალაქო სასამართლო</th>
+                                    <td class="small_resolution">დოკუმენტის დასახელება</td>
+                                    <td>გადაწყვეტილება</td>
+                                    <td class="small_resolution">გადაწყვეტილება</td>
+                                    <td class="pdf_version"><img src="assets/images/pdf.png"> საბეჭდი ვერსია</td>
+                                    <td><img src="assets/images/file.png"> ტექსტური ვერსია</td>
+                                </tr>
+                                <tr>
+                                    <th class="small_resolution">ინსტანცია</td>
+                                    <th scope="row">თბილისის საქალაქო სასამართლო</th>
+                                    <td class="small_resolution">დოკუმენტის დასახელება</td>
+                                    <td>გადაწყვეტილება</td>
+                                    <td class="small_resolution">გადაწყვეტილება</td>
+                                    <td class="pdf_version"><img src="assets/images/pdf.png"> საბეჭდი ვერსია</td>
+                                    <td><img src="assets/images/file.png"> ტექსტური ვერსია</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="col-12 more"><button type="button"><span> მეტის
+                                    ნახვა</span><img src="assets/images/arrow-down.png"></button>
+                        </div>
+                        <div class="col-12 close_btn"><span class="closeBtn">დახურვა</span></div>
+                    </div>
+                </div>
+           </div>
+        </div>
+    </div>
+
     <footer>
         <div class="container">
             <div class="footer_menu">
@@ -83,23 +476,9 @@
                         <li><a href="#">მომხმარებლის სახელმძღვანელო</a></li>
                     </ul>
                 </div>
-
             </div>
         </div>
     </footer>
-
-
-
-
-
-
-
-
-
-
-
-
-
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
@@ -110,6 +489,7 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <script src="assets/js/main.js"></script>
-</body>
+    <script src="assets/js/multiple-select.js"></script>
 
+</body>
 </html>
